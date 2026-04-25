@@ -1,21 +1,22 @@
-// Stacks Check-in SDK Entry Point
-const { StacksMainnet, StacksTestnet } = require('@stacks/network');
-const { makeContractCall, broadcastTransaction, AnchorMode } = require('@stacks/transactions');
+import { StacksMainnet, StacksTestnet, StacksNetwork } from '@stacks/network';
+import { makeContractCall, broadcastTransaction, AnchorMode, SignedContractCallOptions } from '@stacks/transactions';
 
-class StacksCheckInSDK {
-  constructor(networkType = 'testnet') {
+export class StacksCheckInSDK {
+  public network: StacksNetwork;
+
+  constructor(networkType: 'mainnet' | 'testnet' = 'testnet') {
     this.network = networkType === 'mainnet' ? new StacksMainnet() : new StacksTestnet();
   }
 
   /**
    * Helper to build a check-in transaction
-   * @param {string} contractAddress 
-   * @param {string} contractName 
-   * @param {string} senderKey 
+   * @param contractAddress 
+   * @param contractName 
+   * @param senderKey 
    * @returns {Promise<any>}
    */
-  async buildCheckInTx(contractAddress, contractName, senderKey) {
-    const txOptions = {
+  async buildCheckInTx(contractAddress: string, contractName: string, senderKey: string) {
+    const txOptions: SignedContractCallOptions = {
       contractAddress,
       contractName,
       functionName: 'check-in',
@@ -31,14 +32,10 @@ class StacksCheckInSDK {
 
   /**
    * Broadcasts a transaction to the Stacks network
-   * @param {any} transaction 
+   * @param transaction 
    * @returns {Promise<any>}
    */
-  async broadcastTx(transaction) {
+  async broadcastTx(transaction: any) {
     return await broadcastTransaction(transaction, this.network);
   }
 }
-
-module.exports = {
-  StacksCheckInSDK
-};

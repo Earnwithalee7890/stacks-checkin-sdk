@@ -1,11 +1,25 @@
 {
   "name": "@earnwithalee/stacks-checkin-sdk",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "An SDK for interacting with Stacks Check-in smart contracts for the Builder Rewards April Event.",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && node build.mjs",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "repository": {
     "type": "git",
@@ -27,5 +41,11 @@
   "dependencies": {
     "@stacks/network": "^6.13.0",
     "@stacks/transactions": "^6.13.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "~5.4.0",
+    "@types/node": "^20.0.0"
   }
 }
+
