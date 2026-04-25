@@ -1,4 +1,4 @@
-# @earnwithalee/stacks-checkin-sdk
+# @earnwithalee7890/stacks-checkin-sdk
 
 This is a specialized SDK to interact with the Stacks Check-in smart contracts. It is specifically designed and optimized for the **Stacks Builder Rewards April Event** on the **Talent Protocol**.
 
@@ -13,13 +13,13 @@ This is a specialized SDK to interact with the Stacks Check-in smart contracts. 
 You can install this package via the public npmjs registry:
 
 ```bash
-npm install @earnwithalee/stacks-checkin-sdk
+npm install @earnwithalee7890/stacks-checkin-sdk
 ```
 
 ## Usage
 
 ```javascript
-const { StacksCheckInSDK } = require('@earnwithalee/stacks-checkin-sdk');
+const { StacksCheckInSDK } = require('@earnwithalee7890/stacks-checkin-sdk');
 
 const sdk = new StacksCheckInSDK('testnet'); // or 'mainnet'
 

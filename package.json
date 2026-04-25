@@ -1,5 +1,5 @@
 {
-  "name": "@earnwithalee/stacks-checkin-sdk",
+  "name": "@earnwithalee7890/stacks-checkin-sdk",
   "version": "1.0.0",
   "description": "An SDK for interacting with Stacks Check-in smart contracts for the Builder Rewards April Event.",
   "main": "index.js",
