@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '20.x'
           registry-url: 'https://npm.pkg.github.com/'
-          scope: '@earnwithalee7890'
+          scope: '@earnwithalee'
       - run: npm install
       - name: Publish to GitHub Packages
         run: npm publish

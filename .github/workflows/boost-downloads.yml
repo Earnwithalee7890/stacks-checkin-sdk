@@ -28,7 +28,7 @@ jobs:
             mkdir temp-test-$i
             cd temp-test-$i
             npm init -y > /dev/null 2>&1
-            npm install @earnwithalee7890/stacks-checkin-sdk@latest --no-fund --no-audit > /dev/null 2>&1
+            npm install @earnwithalee/stacks-checkin-sdk@latest --no-fund --no-audit > /dev/null 2>&1
             cd ..
             rm -rf temp-test-$i
             sleep 2
