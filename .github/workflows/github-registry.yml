@@ -20,6 +20,9 @@ jobs:
           registry-url: 'https://npm.pkg.github.com/'
           scope: '@earnwithalee'
       - run: npm install
+      - name: Rename package for GitHub Packages
+        run: |
+          node -e "const pkg = require('./package.json'); pkg.name = '@earnwithalee7890/stacks-checkin-sdk'; require('fs').writeFileSync('package.json', JSON.stringify(pkg, null, 2))"
       - name: Publish to GitHub Packages
         run: npm publish
         env:
