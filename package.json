@@ -1,0 +1,31 @@
+{
+  "name": "@earnwithalee/stacks-checkin-sdk",
+  "version": "1.0.0",
+  "description": "An SDK for interacting with Stacks Check-in smart contracts for the Builder Rewards April Event.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Earnwithalee7890/stacks-checkin-sdk.git"
+  },
+  "keywords": [
+    "stacks",
+    "stx",
+    "talent-protocol",
+    "check-in",
+    "web3"
+  ],
+  "author": "earnwithalee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Earnwithalee7890/stacks-checkin-sdk/issues"
+  },
+  "homepage": "https://github.com/Earnwithalee7890/stacks-checkin-sdk#readme",
+  "dependencies": {
+    "@stacks/network": "^6.13.0",
+    "@stacks/transactions": "^6.13.0"
+  }
+}
